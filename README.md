@@ -8,7 +8,7 @@ This program retrieves items, item price, and quantity from the user and creates
 
 1. Install main.py and spreadsheet.py in the same directory.
 
-2. Run the program.
+2. Run the program from the directory.
 ```
    python main.py
 ```
@@ -16,20 +16,5 @@ This program retrieves items, item price, and quantity from the user and creates
 ---
 
 ## Videos
-- [Code Demo](https://www.youtube.com/watch?v=...)
-- [Code Walkthrough](https://www.youtube.com/watch?v=...)
-
----
-
-## Citations
-
-This project uses the following libraries and assets.
-
-| Library / Asset | License Type   | Usage   |
-| :- | :- | :- |
-| [wonderwords](https://pypi.org/project/wonderwords/) | MIT | random word generation |
-
----
-
-## Tutorials, Documentation, and Code Referenced
-- [Madlibs Python Tutorial | Beginner Python Project](https://www.youtube.com/watch?v=GdBV4irqOd8) by Kylie Young
+- [Code Demo](https://error.derglab.com/404.html)
+- [Code Walkthrough](https://error.derglab.com/404.html)
