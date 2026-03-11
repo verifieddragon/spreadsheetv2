@@ -6,7 +6,9 @@ This program retrieves items, item price, and quantity from the user and creates
 ## How to Run
 ### In a terminal
 
-1. Run the program.
+1. Install main.py and spreadsheet.py in the same directory.
+
+2. Run the program.
 ```
    python main.py
 ```
