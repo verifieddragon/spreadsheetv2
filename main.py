@@ -1,41 +1,73 @@
-from spreadsheet import rowItem
+######################################################################
+# Spreadsheet Program v2
+# by Kolby Miller
+#
+# Program creates simple spreadsheets for items, prices, and
+# quantities. 
+#
+######################################################################
+
+import spreadsheet
+import os
+
+def startSpreadsheet():
+    spreadsheet_name = spreadsheetName()
+    print(f"Spreadsheet '{spreadsheet_name}' is now active.")
+    #Call spreadsheet.py functions here to manipulate the spreadsheet as needed.
+    
+
+def initMenu():
+    active = True
+    while active:
+        print("\nWelcome to the spreadsheet program!")
+        print("-" * 40)
+        print("\n1. Create or open a spreadsheet")
+        print("2. Exit\n")
+        choice = input("Enter your choice: ")
+        if choice == '1':
+            startSpreadsheet()
+        elif choice == '2':
+            print("Exiting the program.")
+            active = False
+            return "Done"
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+    
+
+def spreadsheetName():
+    namenotGood = True
+    while namenotGood:
+        userinputname = input("Enter the name of the spreadsheet: ")
+        if findFile(userinputname) == None:
+            valid_input = False
+            while not valid_input:
+                usercreate = input(f"Spreadsheet '{userinputname}' not found. Create it? (y/n): ").strip().lower()
+                if usercreate == 'y':
+                    valid_input = True
+                    namenotGood = False
+                    return userinputname
+                elif usercreate == 'n':
+                    valid_input = True
+                    print("Please enter a different name.")
+                else:
+                    print("Invalid input. Please enter 'y' or 'n'.")
+                    valid_input = False
+        else:
+            print(f"Spreadsheet '{userinputname}' found.")
+            return userinputname
+    
+
+def findFile(name):
+    """Search for the spreadsheet file in the current directory."""
+    for file in os.listdir('.'):
+        if file == name:
+            return file
+    return None
 
 def main():
-    
-    # Create a rowItem instance
-    item1 = rowItem("Apple", 10, 0.5)
-    
-    # Display the item details
-    print(item1)
-    
-    # Update quantity and price
-    item1.quantity = 15
-    item1.price = 0.75
-    
-    # Display the updated item details
-    print(item1)
-    print()
-    print()
+    initMenu()
     
     
-    
-###########################################################################
 
 
-    item2 = rowItem("Banana", 20, 0.3)
-    item3 = rowItem("Orange", 5, 0.8)
-    item4 = rowItem("Grapes", 8, 1.2)
-
-    # Example table
-    print(f"{'Name':<20} | {'Qty':<5} | {'Price':<10} | {'Total':<10}")
-    print("-" * 50)
-    print(item1)
-    print(item2)
-    print(item3)
-    print(item4)
-    print("-" * 50)
-    print(f"{'Total':<41} | {item1.total + item2.total + item3.total + item4.total:<10.2f}")
-    print()
-    
-    
 if __name__ == "__main__":    main()
