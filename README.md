@@ -16,5 +16,5 @@ This program retrieves items, item price, and quantity from the user and creates
 ---
 
 ## Videos
-- [Code Demo](https://error.derglab.com/404.html)
-- [Code Walkthrough](https://error.derglab.com/404.html)
+- [Code Demo](https://youtu.be/L4KhqAXJHLI)
+- [Code Walkthrough](https://youtu.be/2Y3mLFteslk)
